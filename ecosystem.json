@@ -28,7 +28,7 @@
   deploy : {
     production : {
       user : "root",
-      host : "10.144.232.46",
+      host : "10.165.61.121",
       ref  : "origin/master",
       repo : "https://github.com/kelvinlee/Node-Git-update.git",
       path : "/my/test",
