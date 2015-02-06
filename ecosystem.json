@@ -1,0 +1,38 @@
+{
+  /**
+   * This is a sample configuration file for PM2
+   */
+
+  /**
+   * Here we declare the apps that must be managed by PM2
+   * All options are listed here:
+   * https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#json-app-declaration
+   *
+   */
+  apps : [
+
+    // First application
+    {
+      name      : "Active-Node",
+      script    : "app.js"
+    }
+
+  ],
+
+
+  /**
+   * PM2 help you to deploy apps over your servers
+   * For more help go to :
+   * https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#deployment-pm2--090
+   */
+  deploy : {
+    production : {
+      user : "root",
+      host : "10.144.232.46",
+      ref  : "origin/master",
+      repo : "https://github.com/kelvinlee/Node-Git-update.git",
+      path : "/my/test",
+      "post-deploy" : "pm2 startOrRestart ecosystem.json --env production"
+    }
+  }
+}
