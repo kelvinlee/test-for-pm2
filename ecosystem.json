@@ -30,8 +30,8 @@
       user : "root",
       host : "10.165.61.121",
       ref  : "origin/master",
-      repo : "https://github.com/kelvinlee/Node-Git-update.git",
-      path : "/my/test",
+      repo : "https://github.com/kelvinlee/test-for-pm2.git",
+      path : "/my/test-for-pm2",
       "post-deploy" : "pm2 startOrRestart ecosystem.json --env production"
     }
   }
